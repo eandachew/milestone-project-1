@@ -16,7 +16,14 @@ body {
 }
 /* Header */
 header {
-    background-color: white;
+  background-color: black;
+  h1#logo {
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: white; 
 
 }
 /* Main */
