@@ -93,3 +93,26 @@ main {
 footer {
     background-color: #211702;
 }
+/* Media query tablets and larger (768px and up */
+@media (min-width: 768px) {
+  #menu {
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+  }
+
+  nav {
+    position: static;
+    display: block !important;
+    background: transparent;
+    padding: 0;
+  }
+
+  .nav-toggle-label {
+    display: none;
+  }
+
+  #nav-toggle {
+    display: none;
+  }
+}
