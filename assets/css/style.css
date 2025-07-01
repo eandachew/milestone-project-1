@@ -84,11 +84,15 @@ nav {
 
 /* Main */
 main {
-    background-color: #f9f9f9;
-    /* Make main element take up any surplus sapce to push footer down*/
   flex: 1 0 auto;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  background-image: url("../images/music-and-society.png");
 
 }
+
+
 /* Footer */
 footer {
     background-color: #211702;
