@@ -91,7 +91,24 @@ main {
   background-image: url("../images/music-and-society.png");
 
 }
+#hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
 
+#hero h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+#hero p { text-align: justify;
+
+}
+
+section {
+  margin-bottom: 3rem;
+}
 
 /* Footer */
 footer {
