@@ -43,6 +43,12 @@ h1#logo {
   margin-bottom: 0.5rem;
   color: white; 
 }
+
+#logo:hover {
+  color: #ffffff;
+  text-decoration: underline; 
+  transition: color 0.3s ease;
+}
 p {
   font-size: 1.2rem;
   margin-bottom: 1rem;
@@ -56,26 +62,32 @@ p {
   gap: 1rem;
   padding: 0;
 }
+#menu a:hover {
+  color: #ffffff; /* Example color */
+  text-decoration: underline;
+  transition: all 0.3s ease;}
+
 /* Nav styles with dropdown toggle*/
 nav {
   display: none;
-  background-color: #1e1e2f;
+  background-color: #ffffff;
   padding: 1rem;
   width: 100%;
   text-align: center;
+}
+a:hover {
+  background-color: white;
+  font-size: 10px;
 }
 #nav-toggle {
   display: none;
 }
 
 .nav-toggle-label {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
   font-size: 2rem;
   cursor: pointer;
-  color: #ffdd57;
-  z-index: 10; 
+  margin-bottom: 0.5rem;
+  color: #ffffff;
 }
 
 #nav-toggle:checked + .nav-toggle-label + nav {
@@ -89,6 +101,8 @@ main {
   margin: 2rem auto;
   padding: 0 1rem;
   background-image: url("../images/music-and-society.png");
+  background-image: flex;
+
 
 }
 #hero {
@@ -110,7 +124,7 @@ section {
   margin-bottom: 3rem;
 }
 h2 {
-  color: #f2f2fb;
+  color: #040413;
   margin-bottom: 1rem;
   border-bottom: 2px solid #ddd;
   padding-bottom: 0.5rem;
@@ -151,9 +165,7 @@ h2 {
 footer {
  background-image: linear-gradient(
       rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.6)
-    ),
-    url('../images/podcast-banner.jpg');
+      rgba(0, 0, 0, 0.6) ), url('../images/podcast-banner.jpg');
   background-size: cover;
   background-position: center;
   height: 100px;
