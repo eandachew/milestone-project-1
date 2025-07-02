@@ -147,6 +147,7 @@ h2 {
 }
 
 /* Footer */
+
 footer {
  background-image: linear-gradient(
       rgba(0, 0, 0, 0.6),
@@ -164,6 +165,19 @@ footer {
   margin-top: 2rem;
 
 }
+#social-networks {
+text-align: center;
+display: flex;
+justify-content: space-evenly;
+list-style-type: none; 
+padding: 5%
+}
+
+#social-networks i {
+  color: #ffffff;
+  font-size: large;
+}
+
 /* Media query tablets and larger (768px and up */
 @media (min-width: 768px) {
   #menu {
