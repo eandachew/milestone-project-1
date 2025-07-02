@@ -62,10 +62,6 @@ p {
   gap: 1rem;
   padding: 0;
 }
-#menu a:hover {
-  color: #ffffff; /* Example color */
-  text-decoration: underline;
-  transition: all 0.3s ease;}
 
 /* Nav styles with dropdown toggle*/
 nav {
@@ -97,11 +93,14 @@ a:hover {
 /* Main */
 main {
   flex: 1 0 auto;
-  max-width: 800px;
+  width: 100%;
   margin: 2rem auto;
   padding: 0 1rem;
   background-image: url("../images/music-and-society.png");
   background-image: flex;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
 
 }
