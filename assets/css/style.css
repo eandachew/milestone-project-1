@@ -84,8 +84,6 @@ nav {
 
 /* Main */
 main {
-  background-color: #f9f9f9;
-  /* Make main element take up any surplus sapce to push footer down*/
   flex: 1 0 auto;
   max-width: 800px;
   margin: 2rem auto;
@@ -93,7 +91,6 @@ main {
   background-image: url("../images/music-and-society.png");
 
 }
-
 #hero {
   text-align: center;
   margin-bottom: 3rem;
@@ -109,25 +106,9 @@ main {
 
 }
 
-.cta-button {
-  display: inline-block;
-  background-color: #ff6f61;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #e85b4f;
-}
-
 section {
   margin-bottom: 3rem;
 }
-
 h2 {
   color: #f2f2fb;
   margin-bottom: 1rem;
@@ -146,15 +127,42 @@ h2 {
 .episode h3 {
   margin-bottom: 0.5rem;
 }
-
 .episode audio {
   width: 100%;
-  margin-top: 0.5rem;
+  margin-top: 0.5rem; 
+}
+.cta-button {
+  display: inline-block;
+  background-color: #ff6f61;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e85b4f;
 }
 
 /* Footer */
 footer {
-    background-color: #211702;
+ background-image: linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url('../images/podcast-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100px;
+  position: relative;
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #211702;
+  color: #ffffff;
+  margin-top: 2rem;
+
 }
 /* Media query tablets and larger (768px and up */
 @media (min-width: 768px) {
