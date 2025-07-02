@@ -23,6 +23,7 @@ header {
   color: white;
   position: relative;
 }
+
 .overlay {
   background-color: rgba(0, 0, 0, 0.5);
   height: 100%;
@@ -36,23 +37,45 @@ header {
 }
 
 h1#logo {
-  font-family: 'Playfair Display', serif; 
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 3px;
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
   color: white; 
 }
 
-#logo:hover {
-  color: #ffffff;
-  text-decoration: underline; 
-  transition: color 0.3s ease;
-}
 p {
   font-size: 1.2rem;
   margin-bottom: 1rem;
-  color: white;
+}
+header a {
+  text-decoration: underline;
+  text-decoration-color: #ffffff; 
+  color: white; 
+}
+
+/* Nav */
+#nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  font-size: 2rem;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  color: #ffdd57;
+}
+
+nav {
+  display: none;
+  background-color: #1e1e2f;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+#nav-toggle:checked + .nav-toggle-label + nav {
+  display: block;
 }
 
 #menu {
@@ -63,32 +86,18 @@ p {
   padding: 0;
 }
 
-/* Nav styles with dropdown toggle*/
-nav {
-  display: none;
-  background-color: #ffffff;
-  padding: 1rem;
-  width: 100%;
-  text-align: center;
-}
-a:hover {
-  background-color: white;
-  font-size: 10px;
-}
-#nav-toggle {
-  display: none;
+nav a {
+  color: #ffdd57;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
-.nav-toggle-label {
-  font-size: 2rem;
-  cursor: pointer;
-  margin-bottom: 0.5rem;
-  color: #ffffff;
+nav a:hover {
+  text-decoration: underline;
 }
 
-#nav-toggle:checked + .nav-toggle-label + nav {
-  display: block;
-}
+
 
 /* Main */
 main {
@@ -101,9 +110,8 @@ main {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-
 }
+
 #hero {
   text-align: center;
   margin-bottom: 3rem;
@@ -174,14 +182,15 @@ footer {
   background-color: #211702;
   color: #ffffff;
   margin-top: 2rem;
-
+ 
 }
+
 #social-networks {
 text-align: center;
 display: flex;
 justify-content: space-evenly;
 list-style-type: none; 
-padding: 5%
+position: relative;
 }
 
 #social-networks i {
