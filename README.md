@@ -16,7 +16,11 @@
    
 3. [Technologies Used](#technologies-used)
 4. [Testing](#testing)
+   -[Common Issues Encountered & How They Were Fixed](#common-issues-encountered--how-they-were-fixed)
 5. [Deployment](#deployment)
+   - [deploying to GitHub Pages](#deploying-to-github-pages)
+   - [Running this project locally](#running-this-project-locally)
+
 6. [Credits](#credits)
    - [Content](#content)
    - [Media](#media)
@@ -169,3 +173,118 @@ Desktop: Full-width
 - Audio playback functionality tested on desktop and mobile devices.
 - Accessibility checks performed for semantic HTML and keyboard navigation.
 - SEO meta tags verified with online tools for proper indexing.
+- **W3C Markup Validation Service** to validate the HTML markup:  
+  [https://validator.w3.org/](https://validator.w3.org/)
+
+- **W3C CSS Validation Service** to check the CSS stylesheets:  
+  [https://jigsaw.w3.org/css-validator/](https://jigsaw.w3.org/css-validator/)
+
+### Common Issues Encountered & How They Were Fixed
+
+- **Favicon Not Showing:**
+  - *Issue:* The favicon did not appear in the browser tab after adding it.
+  - *Fix:* Changed the href paths in the `<link>` tags to correctly point to the relative path of the favicon files inside the `assets/favicon/` folder.
+  **Buggy code:**
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+- **Header Image Not Displaying:**
+  - *Issue:* The header background image was not showing up.
+  
+  - *Fix:* Found a missing closing `</header>` tag that was causing rendering problems. Added the missing tag to fix the issue.
+  <header>
+  <div class="overlay">
+    <h1>Site Title</h1>
+    <p>Subtitle here</p>
+  <!-- Missing </header> tag here -->
+
+Fixed
+<header>
+  <div class="overlay">
+    <h1>Site Title</h1>
+    <p>Subtitle here</p>
+  </div>
+</header>
+  
+- **Audio Player Not Loading Audio:**
+  - *Issue:* Some audio files did not play in the embedded audio player.
+  - *Fix:* Checked file paths and filenames carefully to ensure they matched exactly, including the file extension and capitalization.
+
+- **Navigation Menu Not Working on Small Screens:**
+  - *Issue:* The hamburger menu toggle was not responding.
+  - *Fix:* Verified that the checkbox input and label for the nav toggle had matching id and for attributes, and adjusted CSS display rules to enable the toggle.
+  
+  <input type="checkbox" id="nav-toggle" />
+<label for="nav-toggle" class="nav-toggle-label">☰</label>
+#nav-toggle:checked + .nav-toggle-label + nav {
+  display: block;
+}
+- **Footer Social Media Icons Not Showing on Larger Screens**
+
+On larger screen sizes, the social media icons in the footer were not displaying correctly. This was due to the footer height being too small, which caused the icons to be cut off or hidden.
+
+**Issue:**  
+The footer had a fixed height that was insufficient to show the icons properly.
+
+**Fix:**  
+Increased the footer height to `100px` to ensure enough space for the icons to display fully.
+
+css
+footer {
+  height: 100px; }
+ 
+## Deployment
+
+This project was developed using **Visual Studio Code**, committed to Git, and pushed to **GitHub** using the built-in Git functionality within Cloud9.
+
+### Deploying to GitHub Pages
+
+To deploy this website from its GitHub repository to **GitHub Pages**, the following steps were taken:
+
+1. Log into your GitHub account.
+2. From your list of repositories, select the repository for this project.
+3. Click on the **Settings** tab near the top of the page.
+4. Scroll down to the **GitHub Pages** section.
+5. Under **Source**, click the dropdown menu labeled **None** and select **Master Branch** (or `main` branch if your repo uses that).
+6. Upon selecting the branch, the page will refresh automatically, and the website will be deployed.
+7. Scroll back to the **GitHub Pages** section to find the URL link to the live website.
+
+> **Note:** At the time of submission, the Development and Master branches are identical.
+
+### Running This Project Locally
+
+To clone and run this project on your local machine:
+
+1. Go to the project’s GitHub repository.
+2. Click the green **Code** button (previously “Clone or download”).
+3. Copy the URL under **Clone with HTTPS**.
+4. Open your preferred terminal or command line interface.
+5. Change the directory to where you want the project cloned:
+   bash
+   cd path/to/your/folder
+
+   ### Credits
+
+- **Content:**  
+  The textual content, podcast descriptions, and overall narrative were thoughtfully created by the developer, who brings a unique interdisciplinary background combining applied chemistry, jazz music, and social science. This blend informs the exploration of Ethiopian traditional music, science, and societal themes featured throughout the website.
+
+- **Media:**  
+  The website’s visual assets, including the favicon and header images, were sourced and edited carefully:  
+  - The original images were obtained from [Stockamba](https://stockamba.com/5798/kirar-%E1%8A%AD%E1%88%AB%E1%88%AD/), providing authentic Ethiopian cultural visuals.  
+  - These images were then enhanced and customized using [Freepik’s](https://www.freepik.com/pikaso/assistant/v5ikXa47ye?image=32rQsbyREY&imageType=creation) free editing tools to better fit the website’s aesthetic and branding.  
+  - Favicons were generated using [favicon.io](https://favicon.io/favicon-converter/), ensuring consistent and professional browser tab icons.
+
+- **Code:**  
+  The website’s codebase consists of HTML, CSS, and JavaScript developed within Visual Studio Code. The developer used the built-in Git integration for version control and pushed changes to GitHub. To ensure code quality and standards compliance, the developer utilized:  
+  - [W3C Markup Validation Service](https://validator.w3.org/) to validate HTML.  
+  - [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to check CSS for errors and compatibility.  
+  These tools helped maintain clean, accessible, and standards-compliant code throughout the project.
+
+- **Acknowledgments:**  
+  Special thanks to:  
+  - **favicon.io** for providing simple and effective favicon generation tools.  
+  - **W3Schools** for comprehensive and clear tutorials and references, especially on favicon implementation and responsive design.  
+  - **GitHub** for hosting the project repository and enabling seamless deployment through GitHub Pages.  
+  - **Google Fonts** for the beautiful and readable typography choices ('Lato' and 'Playfair Display') that enhance the user experience.  
+  - The open-source community for creating tools and resources that supported the development and deployment of this website.
