@@ -274,6 +274,10 @@ To clone and run this project on your local machine:
   - The original images were obtained from [Stockamba](https://stockamba.com/5798/kirar-%E1%8A%AD%E1%88%AB%E1%88%AD/), providing authentic Ethiopian cultural visuals.  
   - These images were then enhanced and customized using [Freepik’s](https://www.freepik.com/pikaso/assistant/v5ikXa47ye?image=32rQsbyREY&imageType=creation) free editing tools to better fit the website’s aesthetic and branding.  
   - Favicons were generated using [favicon.io](https://favicon.io/favicon-converter/), ensuring consistent and professional browser tab icons.
+  - **Audio Sources:**  
+  Sample MP3 audio files used for podcast episodes were obtained from the following public domain/free sample audio websites:  
+  - [Samplelib MP3 Samples](https://samplelib.com/sample-mp3.html)  
+  - [File Examples MP3 Samples](https://file-examples.com/index.php/sample-audio-files/sample-mp3-download/)
 
 - **Code:**  
   The website’s codebase consists of HTML, CSS, and JavaScript developed within Visual Studio Code. The developer used the built-in Git integration for version control and pushed changes to GitHub. To ensure code quality and standards compliance, the developer utilized:  
